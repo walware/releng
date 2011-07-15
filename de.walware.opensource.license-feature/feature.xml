@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.walware.opensource.license"
+      label="WalWare.de Open Source Software User Agreement"
+      version="1.0.0"
+      provider-name="WalWare.de">
+
+   <description url="http://www.walware.de/goto/opensource">
+      WalWare.de Open Source Software User Agreement
+   </description>
+
+   <copyright>
+      (c) Copyright Stephan Wahlbrink and others 2003-2011. All rights reserved.
+   </copyright>
+
+   <license>
+      %license_text
+   </license>
+
+</feature>
