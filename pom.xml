@@ -24,6 +24,7 @@
 		<module>../ecommons-ltk/de.walware.ecommons.ltk-build</module>
 		<module>../ecommons-edb/de.walware.ecommons.edb-build</module>
 		
+		<module>../docmlet/de.walware.docmlet-build</module>
 		<module>../statet/de.walware.statet-build</module>
 		
 		<module>../eutils-autorun/de.walware.eutils.autorun-build</module>
