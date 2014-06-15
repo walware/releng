@@ -11,22 +11,6 @@
 	
 	<modules>
 		<module>de.walware.opensource.license-feature</module>
-		<module>de.walware.releng.assemblies</module>
-		
-		<module>../ecommons-coremisc/de.walware.ecommons.coremisc-build</module>
-		<module>../ecommons-uimisc/de.walware.ecommons.uimisc-build</module>
-		
-		<module>../rj-core/de.walware.rj.core-build</module>
-		<module>../rj-client/de.walware.rj.client-build</module>
-		<module>../rj-servi/de.walware.rj.servi-build</module>
-		
-		<module>../ecommons-ltk/de.walware.ecommons.ltk-build</module>
-		<module>../ecommons-edb/de.walware.ecommons.edb-build</module>
-		
-		<module>../docmlet/de.walware.docmlet-build</module>
-		<module>../statet/de.walware.statet-build</module>
-		
-		<module>../eutils-autorun/de.walware.eutils.autorun-build</module>
 	</modules>
 	
 	<prerequisites>
@@ -48,5 +32,60 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	
+	<profiles>
+		<profile>
+			<id>3rdparty-jsch</id>
+			
+			<modules>
+				<module>../3rdparty-jsch/de.walware.3rdparty.jsch-build</module>
+			</modules>
+		</profile>
+		
+		<profile>
+			<id>3rdparty-lucene</id>
+			
+			<modules>
+				<module>../3rdparty-lucene/de.walware.3rdparty.lucene-build</module>
+			</modules>
+		</profile>
+		
+		<profile>
+			<id>eutils-autonature</id>
+			
+			<modules>
+				<module>../eutils-autonature/de.walware.eutils.autonature-build</module>
+			</modules>
+		</profile>
+		
+		<profile>
+			<id>eutils-autorun</id>
+			
+			<modules>
+				<module>../eutils-autorun/de.walware.eutils.autorun-build</module>
+			</modules>
+		</profile>
+		
+		<profile>
+			<id>statet</id>
+			
+			<modules>
+				<module>de.walware.releng.assemblies</module>
+				
+				<module>../ecommons-coremisc/de.walware.ecommons.coremisc-build</module>
+				<module>../ecommons-uimisc/de.walware.ecommons.uimisc-build</module>
+				
+				<module>../rj-core/de.walware.rj.core-build</module>
+				<module>../rj-client/de.walware.rj.client-build</module>
+				<module>../rj-servi/de.walware.rj.servi-build</module>
+				
+				<module>../ecommons-ltk/de.walware.ecommons.ltk-build</module>
+				<module>../ecommons-edb/de.walware.ecommons.edb-build</module>
+				
+				<module>../docmlet/de.walware.docmlet-build</module>
+				<module>../statet/de.walware.statet-build</module>
+			</modules>
+		</profile>
+	</profiles>
+	
 </project>
