@@ -40,6 +40,10 @@
 					<name>WalWare.de</name>
 					<source>
 						<repository>
+							<url>${walware.repo.url.base}/3rdparty-commons.pool</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
 							<url>${walware.repo.url.base}/3rdparty-jsch</url>
 							<layout>p2</layout>
 						</repository>
@@ -50,6 +54,7 @@
 					</source>
 					<append>false</append>
 					<ius>
+						<iu><id>de.walware.3rdparty.commons.pool.feature.group</id></iu>
 						<iu><id>de.walware.3rdparty.jsch.feature.group</id></iu>
 						<iu><id>de.walware.3rdparty.lucene.feature.group</id></iu>
 					</ius>

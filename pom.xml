@@ -37,6 +37,14 @@
 	
 	<profiles>
 		<profile>
+			<id>3rdparty-commons.pool</id>
+			
+			<modules>
+				<module>../3rdparty-commons.pool/-build</module>
+			</modules>
+		</profile>
+		
+		<profile>
 			<id>3rdparty-jsch</id>
 			
 			<modules>
