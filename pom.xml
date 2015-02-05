@@ -61,6 +61,14 @@
 		</profile>
 		
 		<profile>
+			<id>3rdparty-snakeyaml</id>
+			
+			<modules>
+				<module>../3rdparty-snakeyaml/-build</module>
+			</modules>
+		</profile>
+		
+		<profile>
 			<id>eutils-autonature</id>
 			
 			<modules>
