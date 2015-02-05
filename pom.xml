@@ -11,6 +11,8 @@
 	
 	<modules>
 		<module>de.walware.opensource.license-feature</module>
+		
+		<module>de.walware.releng.assemblies</module>
 	</modules>
 	
 	<prerequisites>
@@ -19,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
-		<tycho.version>0.19.0</tycho.version>
+		<tycho.version>0.22.0</tycho.version>
 	</properties>
 	
 	<build>
@@ -38,7 +40,7 @@
 			<id>3rdparty-jsch</id>
 			
 			<modules>
-				<module>../3rdparty-jsch/de.walware.3rdparty.jsch-build</module>
+				<module>../3rdparty-jsch/-build</module>
 			</modules>
 		</profile>
 		
@@ -46,7 +48,7 @@
 			<id>3rdparty-lucene</id>
 			
 			<modules>
-				<module>../3rdparty-lucene/de.walware.3rdparty.lucene-build</module>
+				<module>../3rdparty-lucene/-build</module>
 			</modules>
 		</profile>
 		
@@ -70,20 +72,28 @@
 			<id>statet</id>
 			
 			<modules>
-				<module>de.walware.releng.assemblies</module>
+				<module>../ecommons-coremisc/-build</module>
+				<module>../ecommons-uimisc/-build</module>
+				<module>../ecommons-edb/-build</module>
 				
-				<module>../ecommons-coremisc/de.walware.ecommons.coremisc-build</module>
-				<module>../ecommons-uimisc/de.walware.ecommons.uimisc-build</module>
+				<module>../rj-core/-build</module>
+				<module>../rj-client/-build</module>
+				<module>../rj-servi/-build</module>
 				
-				<module>../rj-core/de.walware.rj.core-build</module>
-				<module>../rj-client/de.walware.rj.client-build</module>
-				<module>../rj-servi/de.walware.rj.servi-build</module>
+				<module>../ecommons-ltk/-build</module>
 				
-				<module>../ecommons-ltk/de.walware.ecommons.ltk-build</module>
-				<module>../ecommons-edb/de.walware.ecommons.edb-build</module>
-				
-				<module>../docmlet/de.walware.docmlet-build</module>
-				<module>../statet/de.walware.statet-build</module>
+				<module>../docmlet/-build</module>
+				<module>../statet/-build</module>
+			</modules>
+		</profile>
+		
+		<profile>
+			<id>walware-repos</id>
+			
+			<modules>
+				<module>walware-repos-3rdparty</module>
+				<module>walware-repos-aggregation</module>
+				<module>walware-repos-online</module>
 			</modules>
 		</profile>
 	</profiles>

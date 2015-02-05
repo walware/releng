@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>de.walware.releng</groupId>
+		<artifactId>releng</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	
+	<groupId>de.walware.releng</groupId>
+	<artifactId>de.walware.releng.repos.online</artifactId>
+	<version>1.0.0</version>
+	
+	<prerequisites>
+		<maven>3.1.1</maven>
+	</prerequisites>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<tycho.version>0.22.0</tycho.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>de.walware.releng</groupId>
+			<artifactId>de.walware.releng.repos.3rdparty</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-p2-extras-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>mirror</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<name>WalWare.de</name>
+					<source>
+						<repository>
+							<url>../statet/-build/repo/target/repository</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
+							<url>../statet-redocs/-build/repo/target/repository</url>
+							<layout>p2</layout>
+						</repository>
+					</source>
+					<append>false</append>
+					<latestVersionOnly>true</latestVersionOnly>
+					<includePacked>false</includePacked>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>de.walware.releng</groupId>
+						<artifactId>de.walware.releng.assemblies</artifactId>
+						<version>1.0.0</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>repository-archive</descriptorRef>
+					</descriptorRefs>
+					<finalName>site</finalName>
+					<appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>
