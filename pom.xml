@@ -88,7 +88,7 @@
 			<id>statet</id>
 			
 			<modules>
-				<module>../ecommons-coremisc/-build</module>
+				<module>../ecommons-misc/-build</module>
 				<module>../ecommons-uimisc/-build</module>
 				<module>../ecommons-edb/-build</module>
 				
