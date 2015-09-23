@@ -44,6 +44,10 @@
 							<layout>p2</layout>
 						</repository>
 						<repository>
+							<url>${walware.repo.url.base}/3rdparty-commons.dbcp</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
 							<url>${walware.repo.url.base}/3rdparty-jsch</url>
 							<layout>p2</layout>
 						</repository>
@@ -59,6 +63,7 @@
 					<append>false</append>
 					<ius>
 						<iu><id>de.walware.3rdparty.commons.pool.feature.group</id></iu>
+						<iu><id>de.walware.3rdparty.commons.dbcp2.feature.group</id></iu>
 						<iu><id>de.walware.3rdparty.jsch.feature.group</id></iu>
 						<iu><id>de.walware.3rdparty.lucene.feature.group</id></iu>
 						<iu><id>de.walware.3rdparty.snakeyaml.feature.group</id></iu>

@@ -45,6 +45,14 @@
 		</profile>
 		
 		<profile>
+			<id>3rdparty-commons.dbcp</id>
+			
+			<modules>
+				<module>../3rdparty-commons.dbcp/-build</module>
+			</modules>
+		</profile>
+		
+		<profile>
 			<id>3rdparty-jsch</id>
 			
 			<modules>
