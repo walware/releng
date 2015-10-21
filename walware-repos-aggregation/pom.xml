@@ -14,23 +14,6 @@
 	<artifactId>de.walware.releng.repos.aggregation</artifactId>
 	<version>1.0.0</version>
 	
-	<prerequisites>
-		<maven>3.1.1</maven>
-	</prerequisites>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
-		<tycho.version>0.22.0</tycho.version>
-	</properties>
-	
-	<dependencies>
-		<dependency>
-			<groupId>de.walware.releng</groupId>
-			<artifactId>de.walware.releng.repos.3rdparty</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-	</dependencies>
-	
 	<build>
 		<plugins>
 			<plugin>
@@ -47,9 +30,29 @@
 				<configuration>
 					<name>WalWare.de</name>
 					<source>
+						<!-- 3rd party libs -->
 						<repository>
-							<url>walware-repos-3rdparty/target/repository</url>
+							<url>${walware.repo.url.base}/3rdparty-commons.pool</url>
+							<layout>p2</layout>
 						</repository>
+						<repository>
+							<url>${walware.repo.url.base}/3rdparty-commons.dbcp</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
+							<url>${walware.repo.url.base}/3rdparty-jsch</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
+							<url>${walware.repo.url.base}/3rdparty-lucene</url>
+							<layout>p2</layout>
+						</repository>
+						<repository>
+							<url>${walware.repo.url.base}/3rdparty-snakeyaml</url>
+							<layout>p2</layout>
+						</repository>
+						
+						<!--  StatET + add-ons -->
 						<repository>
 							<url>../statet/-build/repo/target/repository</url>
 							<layout>p2</layout>
@@ -58,6 +61,8 @@
 							<url>../statet-redocs/-build/repo/target/repository</url>
 							<layout>p2</layout>
 						</repository>
+						
+						<!-- EUtils -->
 						<repository>
 							<url>${walware.repo.url.base}/eclipse-3.8/eutils-autorun</url>
 							<layout>p2</layout>
@@ -68,7 +73,18 @@
 						</repository>
 					</source>
 					<append>false</append>
-					<latestVersionOnly>true</latestVersionOnly>
+					<ius>
+						<iu>
+							<query>
+								<expression>id ~= /*.de.walware.libraries/
+								         || id ~= /*.de.walware.statet/
+								         || id ~= /*.de.walware.utils/</expression>
+								<parameters></parameters>
+							</query>
+						</iu>
+					</ius>
+					<latestVersionOnly>false</latestVersionOnly>
+					
 					<includePacked>false</includePacked>
 				</configuration>
 			</plugin>

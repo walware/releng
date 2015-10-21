@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		
-		<tycho.version>0.22.0</tycho.version>
+		<tycho.version>0.23.1</tycho.version>
 	</properties>
 	
 	<build>
@@ -115,7 +115,6 @@
 			<id>walware-repos</id>
 			
 			<modules>
-				<module>walware-repos-3rdparty</module>
 				<module>walware-repos-aggregation</module>
 				<module>walware-repos-online</module>
 			</modules>

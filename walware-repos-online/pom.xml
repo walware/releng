@@ -14,23 +14,6 @@
 	<artifactId>de.walware.releng.repos.online</artifactId>
 	<version>1.0.0</version>
 	
-	<prerequisites>
-		<maven>3.1.1</maven>
-	</prerequisites>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
-		<tycho.version>0.22.0</tycho.version>
-	</properties>
-	
-	<dependencies>
-		<dependency>
-			<groupId>de.walware.releng</groupId>
-			<artifactId>de.walware.releng.repos.3rdparty</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-	</dependencies>
-	
 	<build>
 		<plugins>
 			<plugin>
