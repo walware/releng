@@ -107,6 +107,9 @@
 				<module>../ecommons-ltk/-build</module>
 				
 				<module>../docmlet/-build</module>
+				
+				<module>../eutils-autonature/de.walware.eutils.autonature-build</module>
+				
 				<module>../statet/-build</module>
 			</modules>
 		</profile>

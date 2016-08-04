@@ -68,7 +68,7 @@
 							<layout>p2</layout>
 						</repository>
 						<repository>
-							<url>${walware.repo.url.base}/eclipse-3.8/eutils-autonature</url>
+							<url>${walware.repo.url.base}/eclipse-4.4/eutils-autonature</url>
 							<layout>p2</layout>
 						</repository>
 					</source>
